@@ -15,8 +15,13 @@ import java.util.List;
 public class ClientController {
     private final ClientService clientService;
 
-    @GetMapping("books")
+    @GetMapping("/book")
     public List<Book> getAllBooks() {
         return clientService.getAllBooks();
+    }
+
+    @GetMapping("/users")
+    public String getAllUsers() {
+        return "users";
     }
 }
